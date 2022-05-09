@@ -1,0 +1,138 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="AddCharacter" xml:space="preserve">
+        <value>Add Character</value>
+    </data>
+    <data name="EditCharacter" xml:space="preserve">
+        <value>Edit</value>
+    </data>
+    <data name="ChoseClass" xml:space="preserve">
+        <value>Chose a class</value>
+    </data>
+    <data name="arcana" xml:space="preserve">
+        <value>Arcane</value>
+    </data>
+    <data name="avatar" xml:space="preserve">
+        <value>Avatar</value>
+    </data>
+    <data name="RegisterMessage" xml:space="preserve">
+        <value>Hello seeker,
+I am :angel:Beatrice:angel: - your guide in the world :crossed_swords: Lost Ark.
+I'll keep you posted on what's happening on server {0}.
+I can also remind you of in-game events that you subscribe to.
+Seeker, start by registering your characters in the menu below.
+Good luck to you and may the blessing of Rufeon always go with you!</value>
+    </data>
+    <data name="RaidCreatedMessageTemplate" xml:space="preserve">
+        <value>Raid created</value>
+    </data>
+    <data name="CharsListTitle" xml:space="preserve">
+        <value>Charecters list:</value>
+    </data>
+    <data name="DeleteCharacter" xml:space="preserve">
+        <value>Delete</value>
+    </data>
+    <data name="Settings" xml:space="preserve">
+        <value>Settings</value>
+    </data>
+    <data name="Language" xml:space="preserve">
+        <value>Language</value>
+    </data>
+    <data name="Timezone" xml:space="preserve">
+        <value>Timezone</value>
+    </data>
+    <data name="ChangeLanguage" xml:space="preserve">
+        <value>Change language</value>
+    </data>
+    <data name="ChangeTimezone" xml:space="preserve">
+        <value>Change timezone</value>
+    </data>
+    <data name="LanguageChanged" xml:space="preserve">
+        <value>Language changed</value>
+    </data>
+    <data name="bard" xml:space="preserve">
+        <value>Bard</value>
+    </data>
+    <data name="berserker" xml:space="preserve">
+        <value>Berserker</value>
+    </data>
+    <data name="deathblade" xml:space="preserve">
+        <value>Deathblade</value>
+    </data>
+    <data name="demonhunter" xml:space="preserve">
+        <value>Demonhunter</value>
+    </data>
+    <data name="dualist" xml:space="preserve">
+        <value>Infighter</value>
+    </data>
+    <data name="fury" xml:space="preserve">
+        <value>Demonic</value>
+    </data>
+    <data name="gunlancer" xml:space="preserve">
+        <value>Gunlancer</value>
+    </data>
+    <data name="gunslinger" xml:space="preserve">
+        <value>Gunslinger</value>
+    </data>
+    <data name="lancemaster" xml:space="preserve">
+        <value>Lance Master</value>
+    </data>
+    <data name="mechanist" xml:space="preserve">
+        <value>Artillerist</value>
+    </data>
+    <data name="paladin" xml:space="preserve">
+        <value>Paladin</value>
+    </data>
+    <data name="ranger" xml:space="preserve">
+        <value>Sharpshooter</value>
+    </data>
+    <data name="reaper" xml:space="preserve">
+        <value>Reaper</value>
+    </data>
+    <data name="scouter" xml:space="preserve">
+        <value>Scouter</value>
+    </data>
+    <data name="sorceress" xml:space="preserve">
+        <value>Sorceress</value>
+    </data>
+    <data name="soulmaster" xml:space="preserve">
+        <value>Soulfist</value>
+    </data>
+    <data name="summoner" xml:space="preserve">
+        <value>Summoner</value>
+    </data>
+    <data name="taigon" xml:space="preserve">
+        <value>Striker</value>
+    </data>
+    <data name="destroyer" xml:space="preserve">
+        <value>Destroyer</value>
+    </data>
+    <data name="SetupTitle" xml:space="preserve">
+        <value>Server SetUp</value>
+    </data>
+    <data name="SetupDescription" xml:space="preserve">
+        <value>Welcome seeker, 
+I
+
+ will gide you through the server setup process</value>
+    </data>
+    <data name="SetupChoseRole" xml:space="preserve">
+        <value>First you should select admin role 
+for controlling my settings.
+Only user with this role can coninue setup</value>
+    </data>
+    <data name="SetupChoseRolePlaceholder" xml:space="preserve">
+        <value>Choose role</value>
+    </data>
+</root>
