@@ -133,4 +133,32 @@
     <data name="SetupChoseRolePlaceholder" xml:space="preserve">
         <value>Выбери роль</value>
     </data>
+    <data name="SetupUserDoesNotHaveAnyRole" xml:space="preserve">
+        <value>Роли текущего пользователя не соотвествуют: {0}</value>
+    </data>
+    <data name="SetupWrongUserRoleTitle" xml:space="preserve">
+        <value>Выбраны неверные роли</value>
+    </data>
+    <data name="SetupClassRolesTitle" xml:space="preserve">
+        <value>Настройка ролей</value>
+    </data>
+    <data name="SetupClassRolesDescription" xml:space="preserve">
+        <value>Вы хотите, чтобы я настроила роли классов.
+Роли пользователей будут назначены, когда они настроят своих персонажей.</value>
+    </data>
+    <data name="SetupClassRolesCreateButton" xml:space="preserve">
+        <value>Создать роли</value>
+    </data>
+    <data name="SetupConinueButton" xml:space="preserve">
+        <value>Продолжить</value>
+    </data>
+    <data name="SetupBossRaidChannelsDescription" xml:space="preserve">
+        <value>Голосовые комнаты для боссов</value>
+    </data>
+    <data name="SetupBossRaidChannelsTitle" xml:space="preserve">
+        <value>Хочешь что бы я создала голосовые комнаты для боссов?</value>
+    </data>
+    <data name="SetupBossRaidChannelsConfirm" xml:space="preserve">
+        <value>Создать голосовые комнаты</value>
+    </data>
 </root>

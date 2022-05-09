@@ -135,4 +135,32 @@ Only user with this role can coninue setup</value>
     <data name="SetupChoseRolePlaceholder" xml:space="preserve">
         <value>Choose role</value>
     </data>
+    <data name="SetupUserDoesNotHaveAnyRole" xml:space="preserve">
+        <value>Current user rolees doesn't match: {0}</value>
+    </data>
+    <data name="SetupWrongUserRoleTitle" xml:space="preserve">
+        <value>Wrong Roles Selected</value>
+    </data>
+    <data name="SetupClassRolesTitle" xml:space="preserve">
+        <value>Setup Roles</value>
+    </data>
+    <data name="SetupClassRolesDescription" xml:space="preserve">
+        <value>Do you want me setup class roles.
+User roles will be assigned when they setup their characters</value>
+    </data>
+    <data name="SetupClassRolesCreateButton" xml:space="preserve">
+        <value>Create Roles</value>
+    </data>
+    <data name="SetupConinueButton" xml:space="preserve">
+        <value>Continue</value>
+    </data>
+    <data name="SetupBossRaidChannelsDescription" xml:space="preserve">
+        <value>Create boss raid voice-rooms</value>
+    </data>
+    <data name="SetupBossRaidChannelsTitle" xml:space="preserve">
+        <value>Do you want me create voice-rooms for Raid bosses</value>
+    </data>
+    <data name="SetupBossRaidChannelsConfirm" xml:space="preserve">
+        <value>Create voice rooms</value>
+    </data>
 </root>

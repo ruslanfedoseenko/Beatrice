@@ -11,6 +11,8 @@ namespace LostArk.Discord.Bot.Db
 
         public DbSet<Character> Characters { get; set; }
         public DbSet<UserSettings> UserSettings { get; set; }
+        public DbSet<GuildClassRoles> GuildClassRoles { get; set; }
+        public DbSet<GuildRoles> GuildRoles { get; set; }
         public DbSet<GuildMemberWelcomeSent> GuildMemberWelcomeSentHistory { get; set; }
     }
 }

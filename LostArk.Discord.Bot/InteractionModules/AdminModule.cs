@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Interactions;
+using Discord.WebSocket;
 using LostArk.Discord.Bot.Constants;
 using LostArk.Discord.Bot.DomainServices;
 using Microsoft.Extensions.Logging;
@@ -13,17 +14,21 @@ namespace LostArk.Discord.Bot.InteractionModules
         class AdminModule : InteractionModuleBase<SocketInteractionContext>
     {
         private readonly ILogger<AdminModule> _logger;
+        private readonly IGuildSettingsService _guildSettingsService;
+        private readonly IUserSettingsService _userSettingsService;
 
-        public AdminModule(ILogger<AdminModule> logger)
+        public AdminModule(ILogger<AdminModule> logger, IGuildSettingsService guildSettingsService, IUserSettingsService userSettingsService)
         {
             _logger = logger;
+            _guildSettingsService = guildSettingsService;
+            _userSettingsService = userSettingsService;
         }
 
         [Group("setup", "Setup server via bot")]
         public class SetupGroup : InteractionModuleBase<SocketInteractionContext>
         {
             private readonly IUserSettingsService _userSettingsService;
-
+            
             public SetupGroup(IUserSettingsService userSettingsService)
             {
                 _userSettingsService = userSettingsService;
@@ -71,13 +76,103 @@ namespace LostArk.Discord.Bot.InteractionModules
         [ComponentInteraction(KnownSelects.ChangeAdminRoles)]
         public async Task ChangeBotAdminRoles(ulong[] roleIds)
         {
+            var resMan = Resources.Localization.ResourceManager;
             var guild = Context.Guild;
             var roles = guild.Roles.Where(x => roleIds.Contains(x.Id));
             var rolesStr = string.Join(", ", roles.Select(x => x.Name));
-            _logger.LogInformation("Chosen roles: {Roles}", roleIds);
 
-            await Context.Interaction.RespondAsync(rolesStr, ephemeral: true);
 
+            var guildAdminRoles = await _guildSettingsService.GetAdminRoles(guild.Id);
+
+            EmbedBuilder? embedBuilder;
+            var userSettings = await _userSettingsService.GetUserSettings(Context.User.Id);
+            if (Context.User is SocketGuildUser user)
+            {
+                var isUserInCurrentRoles = guildAdminRoles.Length == 0 || user.Roles.Any(x => guildAdminRoles.Contains(x.Id));
+
+                var isUserInNewRoles = user.Roles.Any(x => roleIds.Contains(x.Id));
+            
+                if (!isUserInCurrentRoles || !isUserInNewRoles)
+                {
+                    
+                    embedBuilder = new EmbedBuilder()
+                        .WithTitle(resMan.GetString(nameof(Resources.Localization.SetupWrongUserRoleTitle), userSettings.Locale))
+                        .WithDescription(string.Format(resMan.GetString(nameof(Resources.Localization.SetupUserDoesNotHaveAnyRole), userSettings.Locale), rolesStr));
+                    await Context.Interaction.RespondAsync(embed: embedBuilder.Build(), ephemeral: true);
+                    return;
+                }
+            } 
+            
+            _logger.LogInformation("Chosen admin roles: {Roles} for guild: {Guild}", roleIds, guild);
+            await _guildSettingsService.UpdateAdminRoles(guild.Id, roleIds);
+
+            embedBuilder = new EmbedBuilder()
+                .WithTitle(resMan.GetString(nameof(Resources.Localization.SetupClassRolesTitle), userSettings.Locale))
+                .WithDescription(resMan.GetString(nameof(Resources.Localization.SetupClassRolesDescription), userSettings.Locale));
+
+            var componentBuilder = new ComponentBuilder()
+                .WithButton(new ButtonBuilder()
+                    .WithCustomId(KnownButtons.ConfirmClassRolesCreation)
+                    .WithStyle(ButtonStyle.Success)
+                    .WithLabel(resMan.GetString(nameof(Resources.Localization.SetupClassRolesCreateButton), userSettings.Locale))
+                )
+                .WithButton(new ButtonBuilder()
+                    .WithCustomId(KnownButtons.ContinueToRaidBossGroups)
+                    .WithStyle(ButtonStyle.Secondary)
+                    .WithLabel(resMan.GetString(nameof(Resources.Localization.SetupConinueButton), userSettings.Locale))
+                );
+            
+            await Context.Interaction.RespondAsync(embed:embedBuilder.Build(), components: componentBuilder.Build(), ephemeral: true);
+
+        }
+
+        [RequireContext(ContextType.Guild)]
+        [ComponentInteraction(KnownButtons.ConfirmClassRolesCreation)]
+        public async Task CreateClassRoles()
+        {
+            var resMan = Resources.Localization.ResourceManager;
+            var guild = Context.Guild;
+            
+            var guildAdminRoles = await _guildSettingsService.GetAdminRoles(guild.Id);
+
+            var roles = guild.Roles.Where(x => guildAdminRoles.Contains(x.Id));
+            var rolesStr = string.Join(", ", roles.Select(x => x.Name));
+            EmbedBuilder? embedBuilder;
+            var userSettings = await _userSettingsService.GetUserSettings(Context.User.Id);
+            if (Context.User is SocketGuildUser user)
+            {
+                var isUserInCurrentRoles = user.Roles.Any(x => guildAdminRoles.Contains(x.Id));
+                
+            
+                if (!isUserInCurrentRoles)
+                {
+                    
+                    embedBuilder = new EmbedBuilder()
+                        .WithTitle(resMan.GetString(nameof(Resources.Localization.SetupWrongUserRoleTitle), userSettings.Locale))
+                        .WithDescription(string.Format(resMan.GetString(nameof(Resources.Localization.SetupUserDoesNotHaveAnyRole), userSettings.Locale), rolesStr));
+                    await Context.Interaction.RespondAsync(embed: embedBuilder.Build(), ephemeral: true);
+                    return;
+                }
+            } 
+            _guildSettingsService.CreateClassRoles(Context.Guild, userSettings.Locale);
+            
+            embedBuilder = new EmbedBuilder()
+                .WithTitle(resMan.GetString(nameof(Resources.Localization.SetupBossRaidChannelsTitle), userSettings.Locale))
+                .WithDescription(resMan.GetString(nameof(Resources.Localization.SetupBossRaidChannelsDescription), userSettings.Locale));
+
+            var componentBuilder = new ComponentBuilder()
+                .WithButton(new ButtonBuilder()
+                    .WithCustomId(KnownButtons.ConfirmBossRoomsCreation)
+                    .WithStyle(ButtonStyle.Success)
+                    .WithLabel(resMan.GetString(nameof(Resources.Localization.SetupBossRaidChannelsConfirm), userSettings.Locale))
+                )
+                .WithButton(new ButtonBuilder()
+                    .WithCustomId(KnownButtons.ContinueToRaidBossGroups)
+                    .WithStyle(ButtonStyle.Secondary)
+                    .WithLabel(resMan.GetString(nameof(Resources.Localization.SetupConinueButton), userSettings.Locale))
+                );
+            
+            await Context.Interaction.RespondAsync(embed:embedBuilder.Build(), components: componentBuilder.Build(), ephemeral: true);
         }
         
     }

@@ -322,6 +322,33 @@ namespace LostArk.Discord.Bot.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SetupBossRaidChannelsConfirm.
+        /// </summary>
+        internal static string SetupBossRaidChannelsConfirm {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetupBossRaidChannelsDescription.
+        /// </summary>
+        internal static string SetupBossRaidChannelsDescription {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetupBossRaidChannelsTitle.
+        /// </summary>
+        internal static string SetupBossRaidChannelsTitle {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SetupChoseRole.
         /// </summary>
         internal static string SetupChoseRole {
@@ -340,6 +367,42 @@ namespace LostArk.Discord.Bot.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SetupClassRolesCreateButton.
+        /// </summary>
+        internal static string SetupClassRolesCreateButton {
+            get {
+                return ResourceManager.GetString("SetupClassRolesCreateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetupClassRolesDescription.
+        /// </summary>
+        internal static string SetupClassRolesDescription {
+            get {
+                return ResourceManager.GetString("SetupClassRolesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetupRolesTitle.
+        /// </summary>
+        internal static string SetupClassRolesTitle {
+            get {
+                return ResourceManager.GetString("SetupClassRolesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetupConinueButton.
+        /// </summary>
+        internal static string SetupConinueButton {
+            get {
+                return ResourceManager.GetString("SetupConinueButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SetupDescription.
         /// </summary>
         internal static string SetupDescription {
@@ -354,6 +417,24 @@ namespace LostArk.Discord.Bot.Resources {
         internal static string SetupTitle {
             get {
                 return ResourceManager.GetString("SetupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetupUserDoesNotHaveAnyRole.
+        /// </summary>
+        internal static string SetupUserDoesNotHaveAnyRole {
+            get {
+                return ResourceManager.GetString("SetupUserDoesNotHaveAnyRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SetupWrongUserRoleTitle.
+        /// </summary>
+        internal static string SetupWrongUserRoleTitle {
+            get {
+                return ResourceManager.GetString("SetupWrongUserRoleTitle", resourceCulture);
             }
         }
         

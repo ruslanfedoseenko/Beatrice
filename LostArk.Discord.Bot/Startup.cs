@@ -52,6 +52,7 @@ namespace LostArk.Discord.Bot
                 .AddSingleton<Bootstrap>()
                 .AddTransient<ICharacterService, CharacterService>()
                 .AddTransient<IUserSettingsService, UserSettingsService>()
+                .AddTransient<IGuildSettingsService, GuildSettingsService>()
                 .AddTransient<IGuildCommonComponentsProvider, GuildCommonComponentsProvider>()
                 .AddSingleton(_socketConfig)
                 .AddSingleton(gameSettings)

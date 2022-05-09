@@ -132,4 +132,31 @@
     <data name="SetupChoseRolePlaceholder" xml:space="preserve">
         <value>SetupChoseRolePlaceholder</value>
     </data>
+    <data name="SetupUserDoesNotHaveAnyRole" xml:space="preserve">
+        <value>SetupUserDoesNotHaveAnyRole</value>
+    </data>
+    <data name="SetupWrongUserRoleTitle" xml:space="preserve">
+        <value>SetupWrongUserRoleTitle</value>
+    </data>
+    <data name="SetupClassRolesTitle" xml:space="preserve">
+        <value>SetupRolesTitle</value>
+    </data>
+    <data name="SetupClassRolesDescription" xml:space="preserve">
+        <value>SetupClassRolesDescription</value>
+    </data>
+    <data name="SetupClassRolesCreateButton" xml:space="preserve">
+        <value>SetupClassRolesCreateButton</value>
+    </data>
+    <data name="SetupConinueButton" xml:space="preserve">
+        <value>SetupConinueButton</value>
+    </data>
+    <data name="SetupBossRaidChannelsTitle" xml:space="preserve">
+        <value>SetupBossRaidChannelsTitle</value>
+    </data>
+    <data name="SetupBossRaidChannelsDescription" xml:space="preserve">
+        <value>SetupBossRaidChannelsDescription</value>
+    </data>
+    <data name="SetupBossRaidChannelsConfirm" xml:space="preserve">
+        <value>SetupBossRaidChannelsConfirm</value>
+    </data>
 </root>

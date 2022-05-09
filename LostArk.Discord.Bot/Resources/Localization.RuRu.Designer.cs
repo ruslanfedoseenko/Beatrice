@@ -327,6 +327,33 @@ namespace LostArk.Discord.Bot.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Создать голосовые комнаты.
+        /// </summary>
+        internal static string SetupBossRaidChannelsConfirm {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Голосовые комнаты для боссов.
+        /// </summary>
+        internal static string SetupBossRaidChannelsDescription {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Хочешь что бы я создала голосовые комнаты для боссов?.
+        /// </summary>
+        internal static string SetupBossRaidChannelsTitle {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Для начала выбери роль, 
         ///которая будет управлять моими настройками.
         ///Только пользователь с этой ролью сможет выполнть дальнейшую настройку.
@@ -347,6 +374,43 @@ namespace LostArk.Discord.Bot.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Создать роли.
+        /// </summary>
+        internal static string SetupClassRolesCreateButton {
+            get {
+                return ResourceManager.GetString("SetupClassRolesCreateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы хотите, чтобы я настроила роли классов.
+        ///Роли пользователей будут назначены, когда они настроят своих персонажей..
+        /// </summary>
+        internal static string SetupClassRolesDescription {
+            get {
+                return ResourceManager.GetString("SetupClassRolesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Настройка ролей.
+        /// </summary>
+        internal static string SetupClassRolesTitle {
+            get {
+                return ResourceManager.GetString("SetupClassRolesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Продолжить.
+        /// </summary>
+        internal static string SetupConinueButton {
+            get {
+                return ResourceManager.GetString("SetupConinueButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Приветствую тебя искатель,
         ///Я помогу тебе настроить сервер.
         /// </summary>
@@ -362,6 +426,24 @@ namespace LostArk.Discord.Bot.Resources {
         internal static string SetupTitle {
             get {
                 return ResourceManager.GetString("SetupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Роли текущего пользователя не соотвествуют: {0}.
+        /// </summary>
+        internal static string SetupUserDoesNotHaveAnyRole {
+            get {
+                return ResourceManager.GetString("SetupUserDoesNotHaveAnyRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выбраны неверные роли.
+        /// </summary>
+        internal static string SetupWrongUserRoleTitle {
+            get {
+                return ResourceManager.GetString("SetupWrongUserRoleTitle", resourceCulture);
             }
         }
         

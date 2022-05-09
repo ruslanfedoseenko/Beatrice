@@ -327,6 +327,33 @@ namespace LostArk.Discord.Bot.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create voice rooms.
+        /// </summary>
+        internal static string SetupBossRaidChannelsConfirm {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create boss raid voice-rooms.
+        /// </summary>
+        internal static string SetupBossRaidChannelsDescription {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want me create voice-rooms for Raid bosses.
+        /// </summary>
+        internal static string SetupBossRaidChannelsTitle {
+            get {
+                return ResourceManager.GetString("SetupBossRaidChannelsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First you should select admin role 
         ///for controlling my settings.
         ///Only user with this role can coninue setup.
@@ -343,6 +370,43 @@ namespace LostArk.Discord.Bot.Resources {
         internal static string SetupChoseRolePlaceholder {
             get {
                 return ResourceManager.GetString("SetupChoseRolePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Roles.
+        /// </summary>
+        internal static string SetupClassRolesCreateButton {
+            get {
+                return ResourceManager.GetString("SetupClassRolesCreateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want me setup class roles.
+        ///User roles will be assigned when they setup their characters.
+        /// </summary>
+        internal static string SetupClassRolesDescription {
+            get {
+                return ResourceManager.GetString("SetupClassRolesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setup Roles.
+        /// </summary>
+        internal static string SetupClassRolesTitle {
+            get {
+                return ResourceManager.GetString("SetupClassRolesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue.
+        /// </summary>
+        internal static string SetupConinueButton {
+            get {
+                return ResourceManager.GetString("SetupConinueButton", resourceCulture);
             }
         }
         
@@ -364,6 +428,24 @@ namespace LostArk.Discord.Bot.Resources {
         internal static string SetupTitle {
             get {
                 return ResourceManager.GetString("SetupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current user rolees doesn&apos;t match: {0}.
+        /// </summary>
+        internal static string SetupUserDoesNotHaveAnyRole {
+            get {
+                return ResourceManager.GetString("SetupUserDoesNotHaveAnyRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong Roles Selected.
+        /// </summary>
+        internal static string SetupWrongUserRoleTitle {
+            get {
+                return ResourceManager.GetString("SetupWrongUserRoleTitle", resourceCulture);
             }
         }
         
