@@ -1,0 +1,2 @@
+# Beatrice
+Beatrice discord bot
